@@ -1,10 +1,13 @@
 def discriminant(a, b, c):
+     """описание функции"""
     return b**2 - 4*a*c
 
 def power(base, exponent):
+     """описание функции"""
     return base ** exponent
 
 def root(number, n=2):
+    """описание функции"""
     try:
         if number < 0 and n % 2 == 0:
             raise ValueError("Четный корень из отрицательного числа")
@@ -15,15 +18,19 @@ def root(number, n=2):
         return "Ошибка: нулевая степень корня"
 
 def addition(a, b):
+     """описание функции"""
     return a + b
 
 def subtraction(a, b):
+     """описание функции"""
     return a - b
 
 def multiplication(a, b):
+     """описание функции"""
     return a * b
 
 def division(a, b):
+     """описание функции"""
     if b == 0:
         return "деление на ноль!"
     return a / b
