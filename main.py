@@ -1,16 +1,27 @@
-# This is a sample Python script.
+def discriminant(a, b, c):
+    """
+    Вычисляет дискриминант квадратного уравнения ax² + bx + c = 0
+    Возвращает: float
+    """
+    return b**2 - 4*a*c
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def power(base, exponent):
+    """
+    Возведение числа в произвольную степень
+    Возвращает: float
+    """
+    return base ** exponent
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+def root(number, n=2):
+    """
+    Вычисление корня n-ной степени (по умолчанию квадратный)
+    Возвращает: float или строку с ошибкой
+    """
+    try:
+        if number < 0 and n % 2 == 0:
+            raise ValueError("Четный корень из отрицательного числа")
+        return number ** (1/n)
+    except ValueError as e:
+        return f"Ошибка: {e}"
+    except ZeroDivisionError:
+        return "Ошибка: нулевая степень корня"
