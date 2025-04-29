@@ -1,16 +1,39 @@
-# This is a sample Python script.
+def addition(a, b):
+    return a + b
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def subtraction(a, b):
+    return a - b
 
+def multiplication(a, b):
+    return a * b
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def division(a, b):
+    if b == 0:
+        return "деление на ноль!"
+    return a / b
 
+def main():
+    print("Абсолютный калькулятор")
+    print("Доступные операции: +, -, *, /")
+    
+    try:
+        a = int(input("Введите первое число: "))
+        b = int(input("Введите второе число: "))
+        operation = input("Введите операцию (+, -, *, /): ")
+        
+        if operation == '+':
+            print(f"Результат: {addition(a, b)}")
+        elif operation == '-':
+            print(f"Результат: {subtraction(a, b)}")
+        elif operation == '*':
+            print(f"Результат: {multiplication(a, b)}")
+        elif operation == '/':
+            print(f"Результат: {division(a, b)}")
+        else:
+            print("Ошибка: неизвестная операция")
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+    except:
+        print("Ошибка: введите целое положительное число")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    main()
